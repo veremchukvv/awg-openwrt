@@ -24,6 +24,8 @@ on:
         required: false
         type: string
 
+env:
+  FORCE: "1"
 
 jobs:
   generate-config:
