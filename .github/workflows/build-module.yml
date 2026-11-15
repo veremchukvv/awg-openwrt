@@ -156,8 +156,9 @@ jobs:
           echo "CONFIG_PACKAGE_amneziawg-tools=y" >> .config
           echo "CONFIG_PACKAGE_luci-proto-amneziawg=y" >> .config
           echo "CONFIG_PACKAGE_luci-i18n-amneziawg-ru=y" >> .config
-          
-          make defconfig
+
+          export FORCE=1
+          make defconfig FORCE=1
 
       - name: Build AmneziaWG packages
         run: |
