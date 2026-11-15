@@ -128,6 +128,8 @@ jobs:
           rm "$SDK_FILE"
 
       - name: Setup SDK and feeds
+        env:
+          FORCE: "1"
         run: |
           # Find SDK directory
           SDK_DIR=$(find . -maxdepth 1 -name "openwrt-sdk-*" -type d | head -n1)
